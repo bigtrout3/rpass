@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 94297896d897551e43e733b785efe6e8a7401e0bc78801d752521b2de5c0da22
+-- hash: 06729e24ffb89e683b17721bb22b3e970b4114c989722b2d632e3ff37134a8ba
 
 name:           rpass
 version:        0.1.0.0
@@ -41,7 +41,7 @@ library
     , template-haskell
   default-language: Haskell2010
 
-executable rpass-exe
+executable rpass
   main-is: Main.hs
   other-modules:
       Paths_rpass
