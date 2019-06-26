@@ -1,0 +1,75 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.1.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 94297896d897551e43e733b785efe6e8a7401e0bc78801d752521b2de5c0da22
+
+name:           rpass
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/rpass#readme>
+homepage:       https://github.com/bmpotter13/rpass#readme
+bug-reports:    https://github.com/bmpotter13/rpass/issues
+author:         Brandon Potter
+maintainer:     bmpotter13@gmail.com
+copyright:      2019 Brandon Potter
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/bmpotter13/rpass
+
+library
+  exposed-modules:
+      GenDict
+      Lib
+  other-modules:
+      Paths_rpass
+  hs-source-dirs:
+      src
+  build-depends:
+      HUnit
+    , base >=4.7 && <5
+    , mtl >=2.2.2
+    , random >=1.1
+    , template-haskell
+  default-language: Haskell2010
+
+executable rpass-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_rpass
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , base >=4.7 && <5
+    , mtl >=2.2.2
+    , random >=1.1
+    , rpass
+    , template-haskell
+  default-language: Haskell2010
+
+test-suite rpass-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_rpass
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      HUnit
+    , base >=4.7 && <5
+    , mtl >=2.2.2
+    , random >=1.1
+    , rpass
+    , template-haskell
+  default-language: Haskell2010
